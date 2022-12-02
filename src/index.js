@@ -12,6 +12,8 @@ const firebaseApp = initializeApp({
 });
 document.getElementById('signinbtn').onclick = function(){
     var auth = getAuth(firebaseApp);
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in 
